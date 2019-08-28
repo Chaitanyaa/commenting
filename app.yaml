@@ -1,0 +1,8 @@
+entrypoint: "gunicorn -b:$PORT app.app"
+runtime: python37
+service: test
+env_variables:
+    # The app will look for the model file at: gs://MODEL_BUCKET/MODEL_FILENAME
+    MODEL_BUCKET: commentsapp
+    MODEL_FILENAME1: keras-flask-deploy-webapp-master/models/cnn_bidirectional_gru_model.h5
+    MODEL_FILENAME2: keras-flask-deploy-webapp-master/models/tokenizer_cnn_bidirectional_lstm_model.pkl

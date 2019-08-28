@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments Testing</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.1.0/js/md5.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="{{ url_for('static', filename='js/blog.js') }}" type="text/javascript"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container" style="margin-left: 500px">
+            <a class="navbar-brand" href="#">Comments Testing Environment</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+
+
+		<div>
+			<!--<form id="upload-file" method="post">-->
+			<!--	<textarea name="comment" rows="10" cols="30">The cat was playing in the garden.</textarea>-->
+			<!--	<button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>-->
+			<!--</form>-->
+			
+			<!--<form id="upload-file" method="post">-->
+    				
+    		<!--	    <textarea class="form-control message" rows="3" id="message" name="comment" placeholder="Comment">The cat was playing in the garden.</textarea>-->
+    		<!--	    <button type="button" id="btn-predict" class="btn btn-primary">Predict!</button>-->
+		   <!-- </form>-->
+
+			
+			
+			<form id="comment" method="post">
+			<input type="hidden" id="res">
+			<table width="100%" cellspacing="2">
+			 <tbody>
+			 <tr>
+			 <label for="name">Login Username</label>&nbsp
+			  <input type="text" id="name">
+			  <!--<div class="btn-group" role="group" aria-label="Basic example" style="float:right">-->
+			  <!--<button type="button" class="btn btn-secondary">Negative</button>-->
+			  <!--<button type="button" class="btn btn-secondary">Neutral</button>-->
+			  <!--<button type="button" class="btn btn-secondary">Positive</button>-->
+				<!--</div>-->
+				<table style="width:30%;margin-left:-10px;float:right"><tr>
+				<td style="margin-left:2px;width:30%" width="">
+				<div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"  checked="" value="NEGATIVE">
+                  <label class="custom-control-label" for="customRadio1">Negative</label><p>  </p>
+                </div>
+                </td><td style="margin-left:2px;width:30%">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="NEUTRAL">
+                  <label class="custom-control-label" for="customRadio2">Neutral</label><p>  </p>
+                </div>
+                </td><td style="margin-left:2px;">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" value="POSITIVE">
+                  <label class="custom-control-label" for="customRadio3">Positive</label>
+                </tr></table>
+                </div>
+                </td>
+				</tr>
+				</table>
+				<tr>
+			  <div class="col-lg-20">
+			    <!--<form id="comment" method="post">-->
+    			<!--	<textarea class="form-control message" rows="3" id="message" name="message" placeholder="Comment"></textarea>-->
+    			<!--    <button type="button" id="btn-post" class="btn btn-primary" style="float: right">Post</button>-->
+			    <!--</form>-->
+			    
+			    
+    				
+    			    <textarea class="form-control message" rows="3" id="message" name="comment" placeholder="Comment">The cat was playing in the garden.</textarea>
+    			    <button type="button" id="btn-post" class="btn btn-primary" style="float: right">Post</button>
+    		    
+		    
+		    
+			  </div>
+			</tr>
+			</tbody>
+			</table>
+			</br></br>
+			</form>
+			<div class="comments"></div>
+
+			</div>
+	</div>
+</div>
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+         
+</footer>
+
+</html>
